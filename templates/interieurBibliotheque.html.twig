@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Listing des Livres de la bibliothèqe !{% endblock %}</title>
+</head>
+<body>
+{% block body %}
+{% for listlivres in livres %}
+    {{ listlivres.nom }}
+    {{ listlivres.auteur }}
+    {{ listlivres.categ }}
+{% endfor %}
+{% endblock %}
+</body>
+</html>

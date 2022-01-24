@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Listing des bibliothèque !{% endblock %}</title>
+</head>
+<body>
+{% block body %}
+{% for listbliblio in biblio %}
+    {{ listbliblio.nom }}
+    {{ listbliblio.localisation }}
+    <a
+       href="{{
+       path('bibliotheque', { id: listbliblio.id }) }}"
+    > Voir la bibliotheque
+    </a>
+
+{% endfor %}
+{% endblock %}
+</body>
+</html>
